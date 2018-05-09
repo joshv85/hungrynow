@@ -1,0 +1,38 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+
+<h1>Restaurant Template Title</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Wait Time</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>Restaurant Template</td>
+            <td>123 Test</td>
+            <td>Fresno</td>
+            <td>CA</td>
+            <td>93705</td>
+
+            {% for rteinv in rtemplate %}
+            <td>{{rteinv.Temp_wait_time}} Minutes</td>
+            <td>{{rteinv.created}}</td>
+            {%endfor%} 
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+{% endblock %}

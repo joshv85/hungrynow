@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<form method="post">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>{% csrf_token %}</td>
+                <td>{{ form }}</td>
+                <td><button type="submit">Save</button></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
+{% endblock %}
